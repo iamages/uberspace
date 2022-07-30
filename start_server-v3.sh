@@ -1,0 +1,1 @@
+python3.9 -m gunicorn --bind "0.0.0.0:8081" -k uvicorn.workers.UvicornWorker --access-logfile "-" --access-logformat '%(r)s %(s)s' --chdir '/home/iamages/iamages/server-v3' --forwarded-allow-ips '*' --workers 4 --preload --timeout 0 server.main:app
